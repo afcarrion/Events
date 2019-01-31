@@ -1,0 +1,11 @@
+<div class="col">
+	<figure class="figure">
+		<img src="https://cdn3.iconfinder.com/data/icons/round-icons-vol-2/512/Ticket-512.png" class="figure-img img-fluid rounded" alt="Imagen del evento">
+		<figcaption class="figure-caption">
+			<%= spectacle.name %>
+			<%= link_to 'Ver ', spectacle_path(spectacle.id) %> 
+			<%= link_to 'Editar ', edit_spectacle_path(spectacle) %> 
+			<%= link_to 'Borrar ', spectacle, method: :delete, data: {confirm: 'Esta seguro de eliminar el evento?'} %>			
+		</figcaption>
+	</figure>
+</div>

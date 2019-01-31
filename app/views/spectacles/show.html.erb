@@ -1,0 +1,44 @@
+<div class="index">
+	<h1>Detalle del Evento</h1>	
+</div>
+
+
+<div class="container">
+	<table class="table table-responsive table-hover">
+		<thead>
+			<tr>
+				<th scope="col">Nombre</th>
+				<th scope="col">Categoria</th>
+				<th scope="col">Lugar</th>
+				<th scope="col">Dirección</th>
+				<th scope="col">Fecha de Inicio</th>
+				<th scope="col">Fecha Final</th>
+				<th scope="col">Tipo de Evento</th>
+			</tr>
+
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @spectacle.name %></td>	
+				<td>
+					<%= @spectacle.category %>
+				</td>
+				<td>
+					<%= @spectacle.place %>
+				</td>
+				<td>
+					<%= @spectacle.address %>
+				</td>
+				<td>
+					<%= @spectacle.date_start %>
+				</td>					
+				<td>
+					<%= @spectacle.date_finish %>
+				</td>	
+				<td>
+					<%= @spectacle.type_event %>
+				</td>	
+			</tr>
+		</tbody>
+	</table>
+</div>

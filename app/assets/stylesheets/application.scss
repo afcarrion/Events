@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap";
+
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header{
+	background: #254050;
+    height: 60px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 10px;
+}
+.header-right{
+	height: inherit;
+	display: flex;
+	align-items: center;
+}
+
+.header-right .button{
+	margin-left: 10px;
+}
+
+nav {
+	height: inherit;
+}
+
+nav ul{
+	margin: 0;	
+	display: flex;
+	height: inherit;
+}
+
+nav a{
+	display: flex;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	padding: 0 10px;
+	height: inherit;
+}
+
+nav a:hover{
+	/*border-top: 5px solid red;*/
+	/*box-shadow: donde se ubica la sombra, x , y , difuminado, color*/
+	box-shadow: inset 0 5px 0 red;
+}
+
+nav li{
+	list-style: none;
+	/*margin: 0 10px;*/
+	color:white;
+	height: inherit;
+	display: flex;
+	align-items: center;
+}
+
+nav li:after{
+	content: " | ";
+	display: inline-block;
+	/*margin:0 10px;*/
+}
+
+nav li:last-child:after{
+	display: none;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    height: 60px;
+}
+
+.index{
+	text-align:center;
+	margin: 5px;
+	padding: 10px;	
+
+}

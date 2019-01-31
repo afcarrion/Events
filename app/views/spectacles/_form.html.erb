@@ -1,0 +1,22 @@
+	<div class="form-group">
+		<%= form_for @spectacle do |f| %>
+			<%= f.label :Nombre %>
+			<%= f.text_field :name, class:'form-control' %><br>
+			<%= f.label :Categoria %>
+			<%= f.text_field :category, class:'form-control' %><br>
+			<%= f.label :Lugar %>
+			<%= f.text_field :place, class:'form-control' %><br>
+			<%= f.label :Direccion %>
+			<%= f.text_field :address, class:'form-control' %><br>
+			<%= f.label :Fecha_de_Inicio %>
+			<%= f.text_field :date_start, class:'form-control' %><br>
+			<%= f.label :Fecha_Final %>
+			<%= f.text_field :date_finish, class:'form-control' %><br>
+			<%= f.label :Tipo %>
+			<%= f.text_field :type_event, class:'form-control'%><br>
+			<%= f.label :Email %>
+			<%= f.text_field :email_user, class:'form-control'%><br>
+			<%= f.submit 'Enviar', class:'btn btn-primary'%>
+		<% end %> 	
+	</div>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <a href="https://www.uniandes.edu.co">
+        <img src="https://uniandes.edu.co/sites/default/files/logo-header_0_0.png" alt="" heigth="60px">
+      </a>
+      <div class="header-right">
+        <nav>
+          <ul class="nav justify-content-end">
+            <%- if user_signed_in?%>
+              <li class="nav-item">
+                <%= link_to 'Salir', destroy_user_session_path, method: :delete %>
+              </li>
+              <li class="nav-item">
+                <%= link_to 'Principal', :controller => "home"%>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to ' Iniciar ', new_user_session_path, class: "nav-link"%>
+              </li>
+              <li class="nav-item">
+                <%= link_to ' Registrarme ', new_user_registration_path, class: "nav-link" %>
+              </li>
+            <%end%>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row  h-100 justify-content-center align-items-center">
+        <div class="col-md-9"> 
+          
+          <div class="container">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+            <%= yield %>  
+          </div>
+        </div>
+        <br> 
+      </div>  
+    </div> 
+  </body>
+</html>
